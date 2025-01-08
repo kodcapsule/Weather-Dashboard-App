@@ -86,8 +86,7 @@ Ensure your OpenWeather API key is properly set in your code or as an environmen
 
 
 ### Troubleshooting
-    - Missing Dependencies: Ensure all necessary libraries (such as requests, boto3, python-dotenv) are installed in your virtual environment.
-    - API Key Issues: Double-check that your OpenWeather API key is valid and properly configured.
-    - AWS Permissions: Ensure your AWS credentials you are using have the necessary permissions for S3 operations (like s3:PutObject).
+- Missing Dependencies: Ensure all necessary libraries (such as requests, boto3, python-dotenv) are installed in your virtual environment.
+- API Key Issues: Double-check that your OpenWeather API key is valid and properly configured. - AWS Permissions: Ensure your AWS credentials you are using have the necessary permissions for S3 operations (like s3:PutObject).
 
 By following these instructions, you should be able to successfully execute your weather dashboard application that collects and stores weather data in an S3 bucket!
