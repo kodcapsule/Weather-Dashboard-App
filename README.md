@@ -17,11 +17,11 @@ This project uses the following services
 
 Before starting this  project, make sure you have the following:
 
-    1. An **AWS Account**: Create an AWS account if you haven't done so already.
-    2. A **GitHub Account**: You will need a GitHub account to store your project code and track changes.
-    3 An **IDE** (preferably Visual Studio Code): Use Visual Studio Code (VSCode) for easier development, or any IDE of your choice.
-    4 An **OpenWeather API Key**: Register on OpenWeather to get your API key.
-    5. A **Python virtual environment**: It’s highly recommended to use a virtual environment to isolate your dependencies.
+ 1. An **AWS Account**: Create an AWS account if you haven't done so already.
+ 2. A **GitHub Account**: You will need a GitHub account to store your project code and track changes.
+3 An **IDE** (preferably Visual Studio Code): Use Visual Studio Code (VSCode) for easier development, or any IDE of your choice.
+4 An **OpenWeather API Key**: Register on OpenWeather to get your API key.
+5. A **Python virtual environment**: It’s highly recommended to use a virtual environment to isolate your dependencies.
 
 
 
@@ -68,8 +68,8 @@ pip freeze
 
 Before running the pyhton script , make sure that:
 
-    * You have configured AWS CLI or the AWS SDK (boto3) on your system with the appropriate AWS credentials.
-    * You have an S3 bucket created in your AWS account, or the script will create one automatically. Ensure the bucket name is unique and adjust the configuration in the script accordingly.
+* You have configured AWS CLI or the AWS SDK (boto3) on your system with the appropriate AWS credentials.
+* You have an S3 bucket created in your AWS account, or the script will create one automatically. Ensure the bucket name is unique and adjust the configuration in the script accordingly.
 
 4. Run the Application:
 
