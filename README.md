@@ -1,62 +1,93 @@
 # WEATHER DASHBOARD APP
 
-Simple overview of use/purpose.
+Day 1 of the 30 days of DevOps challenge . 
 
-## Description
+## Weather Data Collection
 
-An in-depth paragraph about your project and overview of use.
+This is a Weather data collection application that collects weather data from OpenWeather for various cites and stores the data in an S3 bucket
 
-## Getting Started
+## Project Details
+This project uses the following services 
+- OpenWeather API: An external API that has weather details of all cities in the world
+- Amazon S3: This is a cloud storage that stores the collected Weather data
+- Python: Python programming language is uthe language used to handle the logic behind this application 
 
-### Dependencies
+### Project Requirements 
+ * Prerequisites
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+Before starting this  project, make sure you have the following:
 
-### Installing
+    1. An **AWS Account**: Create an AWS account if you haven't done so already.
+    2. A **GitHub Account**: You will need a GitHub account to store your project code and track changes.
+    3 An **IDE** (preferably Visual Studio Code): Use Visual Studio Code (VSCode) for easier development, or any IDE of your choice.
+    4 An **OpenWeather API Key**: Register on OpenWeather to get your API key.
+    5. A **Python virtual environment**: It’s highly recommended to use a virtual environment to isolate your dependencies.
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
 
-### Executing program
+
+
+
+### Steps to Set Up and Run the Application
 
 * How to run the program
-* Step-by-step bullets
+1. Set Up Virtual Environment: Open your terminal or command prompt and create a new Python virtual environment.
+
+ ```
+     python3 -m venv venv
 ```
-code blocks for commands
+ Then, activate the virtual environment:
+ * For Windows:
+ ```
+     .\venv\Scripts\activate
+```
+* For macOS/Linux:
+```
+    source venv/bin/activate
+```
+2. Install Dependencies:
+With the virtual environment activated, install the required Python packages listed in the requirements.txt file.
+
+```
+    python3 pip install -r requirements.txt
 ```
 
-## Help
+Note: If you don’t have a requirements.txt, you can create it with all the libraries
 
-Any advise for common problems or issues.
+You can check if the packages have been installed correctly by running:
+
 ```
-command to run if program contains helper info
+   pip freeze
 ```
 
-## Authors
+Note Make sure all the neccessory python packages are install. you can check the packages install using this command.
 
-Contributors names and contact info
+pip freeze
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
 
-## Version History
+3. Set Up AWS and S3 Bucket:
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+Before running the pyhton script , make sure that:
 
-## License
+    * You have configured AWS CLI or the AWS SDK (boto3) on your system with the appropriate AWS credentials.
+    * You have an S3 bucket created in your AWS account, or the script will create one automatically. Ensure the bucket name is unique and adjust the configuration in the script accordingly.
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+4. Run the Application:
 
-## Acknowledgments
+Once everything is set up, run the app with the below command:
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+```
+   python3  src/weather-dashboard.py
+```
+This script will fetch weather data using the OpenWeather API and store it in your S3 bucket.
+
+Ensure your OpenWeather API key is properly set in your code or as an environment variable, and the application will use that key to collect weather data for various cities.
+
+
+
+
+### Troubleshooting
+    * Missing Dependencies: Ensure all necessary libraries (such as requests, boto3, python-dotenv) are installed in your virtual environment.
+    * API Key Issues: Double-check that your OpenWeather API key is valid and properly configured.
+    * AWS Permissions: Ensure your AWS credentials you are using have the necessary permissions for S3 operations (like s3:PutObject).
+
+By following these instructions, you should be able to successfully execute your weather dashboard application that collects and stores weather data in an S3 bucket!
